@@ -61,7 +61,7 @@ public class AlbumController extends HttpServlet {
     	album.setAlGenreId(Integer.parseInt(request.getParameter("AlGenreid")));
     	album.setAlbumName(request.getParameter("AlbumName"));
     	try {
-    		Date albumRelease = new SimpleDateFormat("MM-dd-yyyy").parse(request.getParameter("AlbumRelease"));
+    		Date albumRelease = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("AlbumRelease"));
             album.setAlbumRelease(albumRelease);
         } catch (ParseException e) {
             e.printStackTrace();
